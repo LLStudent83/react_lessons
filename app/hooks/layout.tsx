@@ -19,7 +19,7 @@ export default function featureLayout({
 }) {
   return (
     <div className="flex gap-6 self-stretch h-full pr-5 py-5">
-      <NavigationMenu className="border-r border-r-black px-5">
+      <NavigationMenu className="border-r border-r-black px-5 w-1/5">
         <NavigationMenuList>
           <ul>
             {useStateFeatures.map((link) => (
@@ -33,7 +33,7 @@ export default function featureLayout({
           </ul>
         </NavigationMenuList>
       </NavigationMenu>
-      <section>{children}</section>
+      <section className="w-full">{children}</section>
     </div>
   );
 }

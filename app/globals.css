@@ -129,7 +129,7 @@
   }
 
   p {
-    @apply mb-4 leading-relaxed;
+    @apply leading-relaxed;
   }
 }
 
