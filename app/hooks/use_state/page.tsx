@@ -1,6 +1,6 @@
 export default function UseStatePage() {
   return (
-    <section>
+    <section className="[&>p:not(:last-child)]:pb-6">
       <h1 className="h1">useState</h1>
       <code className="code">
         {" "}
