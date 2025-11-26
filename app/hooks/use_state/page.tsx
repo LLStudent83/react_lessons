@@ -1,5 +1,22 @@
-export default function UseStatePage(){
-    return (
-        <div>страница про useState</div>
-    )
+export default function UseStatePage() {
+  return (
+    <section>
+      <h1 className="h1">useState</h1>
+      <code className="code">
+        {" "}
+        const [state, setState] = useState(initState)
+      </code>
+      <p>
+        React отображает изменения в ui после ререндера. То есть если вы хотите,
+        что бы ваш интерфейс изменился в ответ на действие пользователя, вы
+        должны позаботиться о том что бы действие пользователя привело к
+        рерэндеру компонента, другими словами привело к изменению состояния.
+      </p>
+      <p>
+        Одна из вещей которая может вызвать ререндер - это изменение состояния
+        компонента
+      </p>
+      <p>Хук useState позволяет нам изменять и хранить состояние</p>
+    </section>
+  );
 }

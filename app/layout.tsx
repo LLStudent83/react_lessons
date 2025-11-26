@@ -3,12 +3,10 @@ import { Geist, Geist_Mono } from "next/font/google";
 import {
   NavigationMenu,
   NavigationMenuContent,
-  NavigationMenuIndicator,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
 import Link from "next/link";
 import { hooks } from "./config/navItems";
@@ -39,10 +37,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
-        <header>
+        <header className="bg-gray-500 h-15 flex items-center px-5">
           <NavigationMenu>
             <NavigationMenuList>
-              <NavigationMenuItem>
+              <NavigationMenuItem className="mr-8">
                 <NavigationMenuLink asChild>
                   <Link href="/">Home</Link>
                 </NavigationMenuLink>
@@ -65,7 +63,7 @@ export default function RootLayout({
           </NavigationMenu>
         </header>
         <div className="bg-zinc-50 font-sans dark:bg-black flex-1">
-          <main className=" w-full py-5 px-5 bg-white dark:bg-black sm:items-start h-full">
+          <main className=" w-full bg-white dark:bg-black sm:items-start h-full">
             {children}
           </main>
         </div>
