@@ -26,7 +26,7 @@ const LiveCodeEditor = ({ txtCode }: { txtCode: string }) => {
 
   return (
     <div className="flex bg-gray-100">
-      <div className="w-1/2 border-r border-gray-300 p-4">
+      <div className=" border-r border-gray-300 p-4">
         <h3 className="font-bold mb-2">Код</h3>
         <LiveProvider
           code={code}
@@ -38,7 +38,7 @@ const LiveCodeEditor = ({ txtCode }: { txtCode: string }) => {
           <LiveError className="text-red-500 text-sm mt-2" />
         </LiveProvider>
       </div>
-      <div className="w-1/2 p-4">
+      <div className="w-1/4 p-4">
         <h3 className="font-bold mb-2">Превью</h3>
         <LiveProvider
           code={code}

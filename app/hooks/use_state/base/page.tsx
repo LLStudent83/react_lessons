@@ -4,14 +4,14 @@ const useStateBaseCode = `
 function UseStateBase() {
   const [number, setNumber] = useState(0);
 
-  const decrement = () => {
+  const increment = () => {
     const newNumber = number + 1;
     setNumber(newNumber);
   };
 
   return (
     <div className="flex items-center content-center">
-      <Button className="mr-10" onClick={decrement}>
+      <Button className="mr-10" onClick={increment}>
         Увеличить на 1
       </Button>
       <p>{number}</p>
@@ -26,8 +26,10 @@ export default function UseStateBase() {
     <>
       <LiveCodeEditor txtCode={useStateBaseCode} />
       <div className="mt-10">
-        Кликая по кнопке вы меняете состояние. Смена состояния вызывает рерэндер
-        компонента с новым состоянием
+        <p>
+          Кликая по кнопке вы меняете состояние. Смена состояния вызывает
+          рерэндер компонента с новым состоянием
+        </p>
       </div>
     </>
   );
