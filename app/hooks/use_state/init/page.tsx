@@ -3,13 +3,19 @@
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 
+let count = 0;
+
 const addAge = () => {
-  console.log("пересчитался");
+  count++;
+  console.log("пересчитался", count);
   return 10;
 };
 
 export default function useStateInit() {
-  const [age, setAge] = useState(addAge);
+  const [age, setAge] = useState(addAge); // Нет повторного вызова
+  // const [age, setAge] = useState(addAge()); // Есть повторный вызов
+
+  // const [age, setAge] = useState(() => addAge()); // нет повторного вызова
 
   return (
     <section>
